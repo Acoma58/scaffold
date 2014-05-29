@@ -707,6 +707,9 @@
         "InstanceType": {
           "Ref": "NATInstanceType"
         },
+       "KeyName": {
+          "Ref": "KeyName"
+        },
         "SubnetId": {
           "Ref": "PublicSubnet1"
         },
@@ -736,14 +739,31 @@
           "CidrIp": {
             "Fn::FindInMap": ["Region2VpcCidr", { "Ref" : "AWS::Region" }, "PrivateSubnet1Cidr"]
           }
-        }, {
+        }, 
+          {
+          "IpProtocol": "tcp",
+          "FromPort": "80",
+          "ToPort": "80",
+          "CidrIp": {
+            "Fn::FindInMap": ["Region2VpcCidr", { "Ref" : "AWS::Region" }, "PrivateSubnet2Cidr"]
+          }
+        },
+          {
           "IpProtocol": "tcp",
           "FromPort": "443",
           "ToPort": "443",
           "CidrIp": {
             "Fn::FindInMap": ["Region2VpcCidr", { "Ref" : "AWS::Region" }, "PrivateSubnet1Cidr"]
           }
-        }],
+        },
+         {
+          "IpProtocol": "tcp",
+          "FromPort": "443",
+          "ToPort": "443",
+          "CidrIp": {
+            "Fn::FindInMap": ["Region2VpcCidr", { "Ref" : "AWS::Region" }, "PrivateSubnet2Cidr"]
+          }
+         }],
         "SecurityGroupEgress": [{
           "IpProtocol": "tcp",
           "FromPort": "80",
@@ -867,6 +887,10 @@
     "InstanceSecurityGroup" : {
       "Description" : "The ID of a VPC Security Group that has ingress access to the NAT instance.",
       "Value" : { "Ref" : "InstanceSecurityGroup" }
+    },
+    "NATSecurityGroup" : {
+      "Description" : "The ID of a VPC Security Group that has egress access to the NAT instance.",
+      "Value" : { "Ref" : "NATSecurityGroup" }
     },
     "VPCId" : {
       "Description" : "A VPC ID.",

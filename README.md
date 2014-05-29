@@ -7,8 +7,6 @@ Thanks for joining AWS Developer Community Manager Evan Brown for CloudFormation
 ## The Recording
 Below is the recording of the February 13 session, including Q&A:
 
-[![](img/video.png)](https://plus.google.com/events/cj7ssql3r1475rf6q9q4vv205no)
-
 ## Agenda Overview
 * New features since the last Hangout
 * Community agenda items
