@@ -1,62 +1,6 @@
-AWS CloudFormation Office Hours: February 13, 2014
+FROM: AWS CloudFormation Office Hours: February 13, 2014
 ========================================================
-Thanks for joining AWS Developer Community Manager Evan Brown for CloudFormation Office Hours. The Hangout starts at 9:00 AM PST on Thursday, February 13, and is scheduled for 45 minutes. RSVP for the event at [https://plus.google.com/events/cj7ssql3r1475rf6q9q4vv205no](https://plus.google.com/events/cj7ssql3r1475rf6q9q4vv205no)
-
-[Check out the index](../README.md) for a list of our previous Hangouts, including code samples and recordings.
-
-## The Recording
-Below is the recording of the February 13 session, including Q&A:
-
-## Agenda Overview
-* New features since the last Hangout
-* Community agenda items
-* Feature Highlight: VPC
-* Your Q&A
-
-## About the Q&A
-Q&A is enabled for this Hangout. To ask your question, click the Ask a new question button in the bottom-right corner of your screen.
-
-You can enter your questions at any point during the hangout. Keep in mind that it takes about 50 seconds before the audio and video to make it through all the tubes to your computer, so by the time you've typed your question we may be on another topic. But don't worry! We've got the final half of the Hangout reserved just for Q&A.
-
-## Community Agenda Suggestions
-* Add your suggested agenda items here! Check out [Pull Requests](https://github.com/evandbrown/aws-hangouts/pulls?direction=desc&page=1&sort=created&state=closed) from our last Office Hours to see how others have done it.
-
-## New Features
-
-* **Amazon Redshift** - You can now model a Redshift cluster configuration in a CloudFormation template file and have CloudFormation launch the cluster with a few clicks or CLI commands. The template enables you to version control, replicate, or share your Redshift configuration. [Here is a sample CloudFormation template](https://s3.amazonaws.com/cloudformation-templates-us-east-1/Redshift.template) that provisions a Redshift cluster, and here's a snippet:
-
-    ```json
-    "Resources": {
-        "RedshiftCluster": {
-          "Type": "AWS::Redshift::Cluster",
-          "Properties": {
-            "ClusterType": { "Ref": "ClusterType" },
-            "NumberOfNodes": {
-              "Fn::If": [
-                "IsMultiNodeCluster",
-                {
-                  "Ref": "NumberOfNodes"
-                },
-                {
-                  "Ref": "AWS::NoValue"
-                }
-              ]
-            },
-            "NodeType": { "Ref": "NodeType" },
-            "DBName": { "Ref": "DatabaseName" },
-            "MasterUsername": { "Ref": "MasterUsername" },
-            "MasterUserPassword": { "Ref": "MasterUserPassword" },
-            "ClusterParameterGroupName": { "Ref": "RedshiftClusterParameterGroup" }
-          },
-          "DeletionPolicy": "Snapshot"
-        },
-        ...
-      }
-    ```
-
-    Note the use of ``Fn::If` to conditionally set the `NumberOfNodes` property. Check out [the documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/conditions-section-structure.html) or [our previous Hangout](https://github.com/evandbrown/aws-hangouts/blob/master/20131220_cfn/README.md#conditionals) for more details on Conditional resource creation.
-
-* **AWS Elastic Beanstalk** - Previously, you could use AWS CloudFormation to provision an Elastic Beanstalk application as part of a CloudFormation template and stack. Now, you can use AWS CloudFormation to update that application as well as provisioning it, by updating the associated CloudFormation template and stack.
+Thanks for joining AWS Developer Community Manager Evan Brown for CloudFormation Office Hours. 
 
 ## Feature Highlight: Declare an Amazon VPC with CloudFormation
 We'll walk through building a VPC with public and private subnets, including:
