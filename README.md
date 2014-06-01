@@ -1,16 +1,7 @@
 FROM: AWS CloudFormation Office Hours: February 13, 2014
 ========================================================
-Thanks for joining AWS Developer Community Manager Evan Brown for CloudFormation Office Hours. 
+AWS Community Manager Evan Brown for CloudFormation Office Hours. 
 
-## Feature Highlight: Declare an Amazon VPC with CloudFormation
-We'll walk through building a VPC with public and private subnets, including:
-
-* Provisioning NAT and Bastion instances
-* Making Security Group changes by updating the template and stack
-* Extending our template to work in multiple regions
-* Choosing stack outputs to simplify deploying an app into the VPC
-
-### First Things First
 Let's run the sample with the AWS CLI before we start:
 
 ```
