@@ -903,10 +903,6 @@
       "Description" : "The ID of a VPC Security Group that has ingress access to the NAT instance.",
       "Value" : { "Ref" : "InstanceSecurityGroup" }
     },
-    "NATSecurityGroup" : {
-      "Description" : "The ID of a VPC Security Group that has egress access to the NAT instance.",
-      "Value" : { "Ref" : "NATSecurityGroup" }
-    },
     "VPCId" : {
       "Description" : "A VPC ID.",
       "Value" : { "Ref" : "VPC" }
