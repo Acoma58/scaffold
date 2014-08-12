@@ -1,0 +1,31 @@
+[
+  {
+    "ParameterKey": "KeyName",
+    "ParameterValue": "nimbus"
+  },
+  {
+    "ParameterKey": "VPCAvailabilityZone1",
+    "ParameterValue": "us-west-2a"
+  },
+  {
+    "ParameterKey": "VPCAvailabilityZone2",
+    "ParameterValue": "us-west-2c"
+  },
+  {
+    "ParameterKey": "BastionInstanceType",
+    "ParameterValue": "t1.micro"
+  },
+  {
+    "ParameterKey": "NATInstanceType",
+    "ParameterValue": "t1.micro"
+  },
+  {
+    "ParameterKey": "SSHFrom",
+    "ParameterValue": "68.8.103.82/32"
+  },
+
+  {
+    "ParameterKey": "NetworkName",
+    "ParameterValue": "doit"
+  }  
+]
