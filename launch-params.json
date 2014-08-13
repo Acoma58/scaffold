@@ -21,7 +21,7 @@
   },
   {
     "ParameterKey": "SSHFrom",
-    "ParameterValue": "68.8.103.82/32"
+    "ParameterValue": "some/cidr"
   },
 
   {
