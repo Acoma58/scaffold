@@ -927,7 +927,7 @@
       "Type" : "AWS::ElasticLoadBalancing::LoadBalancer",
       "Properties" : {
         "SecurityGroups" : [{ "Ref" : "LoadBalancerSecurityGroup" }],
-        "Subnets" : [{ "Ref" : "PrivateSubnet1" },{ "Ref" : "PrivateSubnet2" }],
+        "Subnets" : [{ "Ref" : "PublicSubnet1" },{ "Ref" : "PrivateSubnet2" }],
         "Listeners" : [{
           "LoadBalancerPort" : "80",
           "InstancePort" : "80",
