@@ -1,7 +1,7 @@
 [
   {
     "ParameterKey": "KeyName",
-    "ParameterValue": "nimbus"
+    "ParameterValue": "SOMEKEY"
   },
   {
     "ParameterKey": "VPCAvailabilityZone1",
@@ -21,7 +21,7 @@
   },
   {
     "ParameterKey": "SSHFrom",
-    "ParameterValue": "some/cidr"
+    "ParameterValue": "SOMECIDR"
   },
 
   {
