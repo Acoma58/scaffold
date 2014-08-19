@@ -3,6 +3,10 @@ This VPC template is based on the Cloudformation [Office hours of 20140213](http
 ### Run It
 
  After adjusting the values in launch-params.json, just run: 
+ 
+    git clone https://github.com/acoma58/scaffold
+    cd scaffold
+    (adjust launch-params.json)
 
     bash run.sh <stack name>
 
