@@ -1003,6 +1003,10 @@
     "VPCAvailabilityZone2" : {
       "Description": "The AZ that (Public|Private)Subnet2 is launched into.",
       "Value": { "Ref": "VPCAvailabilityZone2"}
+    },
+    "LoadBalancerName" : {
+      "Description": "The Load Balancer Name",
+      "Value": { "Ref": "ProdWebElasticLoadBalancer"}
     }
   }
 }

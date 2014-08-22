@@ -1,0 +1,4 @@
+#!/bin/bash
+LB_NAME="scaffold-ProdWebEl-BSP6L599ZHS7"
+
+/usr/bin/aws elb register-instances-with-load-balancer --load-balancer-name $LB_NAME --instances $@
