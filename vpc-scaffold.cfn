@@ -721,7 +721,11 @@
         },
         "SecurityGroupIds": [{
           "Ref": "NATSecurityGroup"
-        }]
+        }],
+       "Tags": {
+          "Key": "Name",
+          "Value": "NAT Device"
+        }
       }
     },
 
@@ -887,7 +891,11 @@
         },
         "SecurityGroupIds": [{
           "Ref": "BastionSecurityGroup"
-        }]
+        }],
+       "Tags": {
+          "Key": "Name",
+          "Value": "Bastion"
+        }
       }
     },
 
